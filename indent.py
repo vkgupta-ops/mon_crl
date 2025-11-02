@@ -15,15 +15,15 @@ def get_crl():
     all_crl_info = []
 
     list = [
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca1.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca2.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca3.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca4.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca5.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca6.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca7.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca8.crl",
-        "https://ccoe.pages.photon.thalescloud.io/krypton/pki/monitoring/ca10.crl"
+        "https://vkgupta-ops.github.io/mon_crl/ca1.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca2.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca3.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca4.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca5.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca6.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca7.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca8.crl",
+        "https://vkgupta-ops.github.io/mon_crl/ca10.crl"
     ]
     
     all_crl_info = []
@@ -97,4 +97,6 @@ def _parse_crl_text(openssl_text):
     return crl_info
 
 
-get_crl()
+output = get_crl()
+flatten_output = [ item[0] for item in output ]
+print(flatten_output)
